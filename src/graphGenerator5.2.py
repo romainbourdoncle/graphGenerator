@@ -49,11 +49,11 @@ filename_with_extension = filename + ".tex"
 with open(filename_with_extension, "w") as file:
     file.write(latex_document)
 
-#compile to pdf
+# Compile to PDF
 try:
     subprocess.run(["pdflatex", filename_with_extension], check=True)
-    print(f"\nLe fichier {filename_with_extension} a été compilé en PDF avec succès.")
-    print(f"Vous pouvez ouvrir {filename}.pdf pour voir le graphe généré.")
+    print(f"\nThe file {filename_with_extension} has been successfully compiled to PDF.")
+    print(f"You can open {filename}.pdf to view the generated graph.")
 except subprocess.CalledProcessError:
-    print("\nUne erreur s'est produite lors de la compilation du fichier .tex en PDF.")
-    print("Assurez-vous que pdflatex est installé et disponible dans votre PATH.")
+    print("\nAn error occurred while compiling the .tex file to PDF.")
+    print("Make sure that pdflatex is installed and available in your PATH.")
