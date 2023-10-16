@@ -2,7 +2,6 @@ import random
 import subprocess
 import os
 
-
 n_vertices = 456 #number of vertices
 p_edge = 0.008  #probability of an edge between any pair of vertices
 
