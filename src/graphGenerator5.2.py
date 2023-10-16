@@ -48,7 +48,7 @@ filename_with_extension = filename + ".tex"
 with open(filename_with_extension, "w") as file:
     file.write(latex_document)
 
-# Compile to PDF
+#compile to PDF
 try:
     subprocess.run(["pdflatex", filename_with_extension], check=True)
     print(f"\nThe file {filename_with_extension} has been successfully compiled to PDF.")
